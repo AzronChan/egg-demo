@@ -4,7 +4,8 @@ const Controller = require('egg').Controller;
 
 class HomeController extends Controller {
   index() {
-    this.ctx.body = 'Hello World';
+    this.ctx.body = '<p>Hello World</p>';
+    this.ctx.body += `isIos : ${this.ctx.isIOS}`;
   }
 }
 

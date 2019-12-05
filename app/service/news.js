@@ -13,7 +13,6 @@ class NewsService extends Service {
     const { data: { newslist } } = await this.ctx.curl(`${serverUrl}`, {
       dataType: 'json',
     });
-    console.log(1111);
     console.log(newslist);
     return newslist;
   }

@@ -6,7 +6,10 @@ class NewsController extends Controller {
   async list() {
     const ctx = this.ctx;
     const page = ctx.query.page || 1;
-    console.log(ctx.service.news);
+    console.log('+++++++++++++++++++++++');
+    console.log(ctx);
+    console.log('+++++++++++++++++++++++');
+
     const newsList = await ctx.service.news.list(page);
     await ctx.render('list.tpl', { list: newsList });
   }
